@@ -3,99 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Physics Academy</title>
+    <title>Physics Study Plan</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #111;
+            color: #fff;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
-            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
 
-        header {
-            background-color: #1e90ff;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        section {
+        #study-plan {
             max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            background-color: #1e1e1e;
             border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
 
-        h1 {
-            color: #1e90ff;
+        .chart {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
         }
 
-        p {
-            line-height: 1.6;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: #1e90ff;
-            color: #fff;
-            text-decoration: none;
+        .chart-bar {
+            height: 20px;
+            background-color: #3498db;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            margin-right: 5px;
         }
 
-        .cta-button:hover {
-            background-color: #0d5cb6;
+        .chart-bar:last-child {
+            margin-right: 0;
+        }
+
+        .unit {
+            padding: 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        .unit:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        .topics {
+            margin-top: 10px;
+        }
+
+        .topic {
+            margin-bottom: 5px;
+        }
+
+        .toggle-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Physics Academy!</h1>
-        <p>Your Gateway to Excellence in Physics Education</p>
-    </header>
+    <div id="study-plan">
+        <div class="chart">
+            <div class="chart-bar" style="width: 20%;"></div>
+            <div class="chart-bar" style="width: 30%;"></div>
+            <div class="chart-bar" style="width: 25%;"></div>
+            <div class="chart-bar" style="width: 15%;"></div>
+            <div class="chart-bar" style="width: 10%;"></div>
+        </div>
 
-    <section>
-        <h2>About Our Courses</h2>
-        <p>Join our comprehensive Physics courses designed to elevate your understanding and prepare you for success in your exams and beyond. Our expert instructors and interactive learning environment ensure an engaging and effective educational experience.</p>
+        <div class="unit">
+            <h2>Unit 1: Mechanics</h2>
+            <div class="topics">
+                <div class="topic">Introduction to Kinematics</div>
+                <div class="topic">Newton's Laws of Motion</div>
+                <div class="topic">Work, Energy, and Power</div>
+            </div>
+            <button class="toggle-button">Toggle Topics</button>
+        </div>
 
-        <h2>Why Choose Physics Academy?</h2>
-        <ul>
-            <li>Expert Instructors</li>
-            <li>Interactive Learning</li>
-            <li>Real-world Applications</li>
-            <li>Small Class Sizes for Personalized Attention</li>
-            <li>Exciting Challenges and Activities</li>
-        </ul>
+        <div class="unit">
+            <h2>Unit 2: Thermodynamics</h2>
+            <div class="topics hidden">
+                <div class="topic">Heat and Temperature</div>
+                <div class="topic">Laws of Thermodynamics</div>
+                <div class="topic">Heat Transfer</div>
+            </div>
+            <button class="toggle-button">Toggle Topics</button>
+        </div>
 
-        <a href="#cta" class="cta-button">Enroll Now</a>
-    </section>
-
-    <section id="cta">
-        <h2>Ready to Dive into the World of Physics?</h2>
-        <p>Take the first step towards success by joining our Physics courses. Don't miss this opportunity to explore the wonders of the universe!</p>
-
-        <form>
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <button type="submit" class="cta-button">Get Started</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2023 Physics Academy. All rights reserved.</p>
-    </footer>
+        <div class="unit">
+            <h2>Unit 3: Electromagnetism</h2>
+            <div class="topics hidden">
+                <div class="topic">Electrostatics</div>
+                <div class="topic">Magnetic Fields</div>
+                <div class="topic">Electromagnetic Induction</div>
+            </div>
+            <button class="toggle-button">Toggle Topics</button>
+        </div>
+    </div>
 
     <script>
-        // Add any interactive JavaScript here
+        const toggleButtons = document.querySelectorAll('.toggle-button');
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const topics = button.previousElementSibling;
+                topics.classList.toggle('hidden');
+            });
+        });
     </script>
 </body>
 </html>
