@@ -1,0 +1,57 @@
+.icon-bar {
+    width: 90px; /* Set a specific width */
+    background-color: #211f60; 
+    position: fixed;
+    left: 0%;
+    height: 100%;
+    width: 4%;
+  }
+  
+  .icon-bar a {
+    position: relative;
+    display: block; /* Make the links appear below each other instead of side-by-side */
+    text-align: center; /* Center-align text */
+    justify-items: space-between;
+    padding: 10%; /* Add some padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 24px; /* Increased font-size */
+    margin-bottom: 5%;
+  }
+  
+  .icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+  }
+  
+  .active {
+    background-color: #103efb; /* Add an active/current color */
+  }
+
+  .container {
+    display: inline-block;
+    cursor: pointer;
+    padding: 20%;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #030212;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  /* Rotate first bar */
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  /* Fade out the second bar */
+  .change .bar2 {opacity: 0;}
+  
+  /* Rotate last bar */
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+
+  
