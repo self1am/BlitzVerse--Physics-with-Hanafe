@@ -11,6 +11,23 @@ body {
     min-height: 100vh;
 }
 
+.hero{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    /* display: flex; */
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+}
+
 header {
     background-color: #333;
     padding: 20px;
@@ -45,7 +62,7 @@ header {
     height: 20px;
     border-radius: 50%;
     background-color: #3498db;
-    animation: moveDot 4s cubic-bezier(0, 0, 1, 0.38) infinite;
+    animation: moveDot 4s cubic-bezier(0, 0, 0.61, 0.16) infinite;
     top: 50%;
     left: 50%;
 }
@@ -182,6 +199,25 @@ h2 {
     white-space: nowrap;
     border-right: 1px solid #fff; /* Add a border for the blinking cursor effect */
 }
+
+.parallax { 
+    /* The image used */
+    background-image: url("https://i.pinimg.com/564x/ae/74/45/ae74451600a98d96e38e744bfe895772.jpg");
+
+    /* position: absolute; */
+    /* Set a specific height */
+    min-height: 600px; 
+    width: 100%;
+
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(83, 125, 145, 0.57);
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
 @media (max-width: 768px) {
     .typewriter {
