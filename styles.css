@@ -174,7 +174,7 @@ h2 {
     
   }
 
-  #demo {
+  .typewriter {
     /* padding-top: 10%; */
     font-family: 'Courier New', Courier, monospace;
     font-size: 36px;
