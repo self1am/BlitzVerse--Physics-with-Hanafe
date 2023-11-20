@@ -183,3 +183,14 @@ h2 {
     border-right: 1px solid #fff; /* Add a border for the blinking cursor effect */
 }
 
+@media (max-width: 768px) {
+    .typewriter {
+        font-size: 24px; /* Adjust the font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .typewriter {
+        font-size: 18px; /* Further adjust the font size for even smaller screens */
+    }
+}
