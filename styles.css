@@ -28,9 +28,49 @@ header {
 .countdown-container {
     text-align: center;
 }
+.countdown-circle {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #1e1e1e;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.countdown-dot {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #3498db;
+    animation: moveDot 4s cubic-bezier(0, 0, 1, 0.38) infinite;
+    top: 50%;
+    left: 50%;
+}
+
+@keyframes moveDot {
+    /* 0% {
+        transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+    100% {
+        transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    } */
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(150px);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(150px);
+    }
+}
 
 #countdown {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 3em;
+    z-index: 2;
 }
 
 .chart {

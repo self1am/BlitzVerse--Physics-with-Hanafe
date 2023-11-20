@@ -8,51 +8,16 @@
 </head>
 <body>
 
-    <div class="timeline-link">
-        <a href="timeline.html">Visit Timeline</a>
-    </div>
-    <div id="study-plan">
-        <div class="chart">
-            <div class="chart-bar" style="width: 20%;"></div>
-            <div class="chart-bar" style="width: 30%;"></div>
-            <div class="chart-bar" style="width: 25%;"></div>
-            <div class="chart-bar" style="width: 15%;"></div>
-            <div class="chart-bar" style="width: 10%;"></div>
-        </div>
-
-        <div class="unit">
-            <h2>Unit 1: Mechanics</h2>
-            <div class="topics">
-                <div class="topic">Introduction to Kinematics</div>
-                <div class="topic">Newton's Laws of Motion</div>
-                <div class="topic">Work, Energy, and Power</div>
-            </div>
-            <button class="toggle-button">Toggle Topics</button>
-        </div>
-
-        <div class="unit">
-            <h2>Unit 2: Thermodynamics</h2>
-            <div class="topics hidden">
-                <div class="topic">Heat and Temperature</div>
-                <div class="topic">Laws of Thermodynamics</div>
-                <div class="topic">Heat Transfer</div>
-            </div>
-            <button class="toggle-button">Toggle Topics</button>
-        </div>
-
-        <div class="unit">
-            <h2>Unit 3: Electromagnetism</h2>
-            <div class="topics hidden">
-                <div class="topic">Electrostatics</div>
-                <div class="topic">Magnetic Fields</div>
-                <div class="topic">Electromagnetic Induction</div>
-            </div>
-            <button class="toggle-button">Toggle Topics</button>
-        </div>
-        <div class="countdown-container">
+    
+    <div class="countdown-container">
+        <div class="countdown-circle">
+            <div class="countdown-dot"></div>
             <h1 id="countdown">00:00:00</h1>
         </div>
+        <div id="demo"></div>
     </div>
+
+    
 
     <script>
         const toggleButtons = document.querySelectorAll('.toggle-button');
@@ -92,6 +57,19 @@ const x = setInterval(function() {
     }
 }, 1000);
 
+    </script>
+    <script>
+        var i = 0;
+var txt = 'Lorem ipsum typing effect!'; /* The text */
+var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
     </script>
 </body>
 </html>
