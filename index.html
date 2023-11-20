@@ -14,12 +14,29 @@
             <div class="countdown-dot"></div>
             <h1 id="countdown">00:00:00</h1>
         </div>
+        
+    </div>
+
+    <div style="padding-top: 5%;">
         <div id="demo"></div>
     </div>
 
-    
-
     <script>
+        var i = 0;
+        var txt = 'Every Second Counts...'; /* The text */
+        var speed = 100; /* The speed/duration of the effect in milliseconds */
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("demo").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        typeWriter();
+    </script>
+    <!-- <script>
         const toggleButtons = document.querySelectorAll('.toggle-button');
         toggleButtons.forEach(button => {
             button.addEventListener('click', () => {
@@ -27,49 +44,37 @@
                 topics.classList.toggle('hidden');
             });
         });
-    </script>
+    </script> -->
     <!-- <script src="index.js"></script> -->
     <script>
         // Set the date we're counting down to
-const countDownDate = new Date("Dec 31, 2023 00:00:00").getTime();
+        const countDownDate = new Date("Jan 4, 2024 00:00:00").getTime();
 
-// Update the countdown every 1 second
-const x = setInterval(function() {
-    // Get the current date and time
-    const now = new Date().getTime();
+        // Update the countdown every 1 second
+        const x = setInterval(function() {
+            // Get the current date and time
+            const now = new Date().getTime();
 
-    // Calculate the time remaining
-    const distance = countDownDate - now;
+            // Calculate the time remaining
+            const distance = countDownDate - now;
 
-    // Calculate days, hours, minutes, and seconds
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Calculate days, hours, minutes, and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Display the countdown
-    document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            // Display the countdown
+            document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
-    // If the countdown is over, display a message
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "EXPIRED";
-    }
-}, 1000);
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
 
     </script>
-    <script>
-        var i = 0;
-var txt = 'Lorem ipsum typing effect!'; /* The text */
-var speed = 50; /* The speed/duration of the effect in milliseconds */
-
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("demo").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-    </script>
+    
 </body>
 </html>
