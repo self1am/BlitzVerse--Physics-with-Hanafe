@@ -11,6 +11,64 @@ body {
     min-height: 100vh;
 }
 
+.navbar {
+    background-color: #111;
+    padding: 10px 20px;
+    box-shadow: none; /* Initially, no shadow */
+    transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-placeholder {
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    margin-right: 10px;
+}
+
+.logo-placeholder img {
+    width: 100%; /* Make the logo fill the placeholder */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.brand {
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 20px;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007BFF;
+}
+
+/* Add sticky styles for the navbar when scrolled */
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.5); /* Neon blue shadow when sticky */
+    z-index: 1000;
+}
+
+.navbar.sticky .logo-placeholder img {
+    opacity: 0.7; /* Reduce opacity when the navbar is sticky */
+}
+
 .hero{
     height: 100vh;
     display: flex;
@@ -43,6 +101,36 @@ header {
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
+
+.content-container{
+    color: #777; 
+    background-color: #f9f9f9; 
+    text-align: center; 
+    padding: 50px 80px; 
+    text-align: justify; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.year{
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 48px; 
+    color: #35dc75;
+}
+
+ol{
+    list-style-type: decimal; 
+    padding-left: 20px; 
+    color: #555; 
+    font-size: 1.2em; 
+    line-height: 1.6;
+}
+
+.highlight{
+    color: #FF4500; 
+    font-weight: bold;
+}
+
 .countdown-container {
     text-align: center;
 }
@@ -200,16 +288,17 @@ h2 {
     border-right: 1px solid #fff; /* Add a border for the blinking cursor effect */
 }
 
-.parallax { 
+.parallax {
     /* The image used */
-    background-image: url("https://i.pinimg.com/564x/ae/74/45/ae74451600a98d96e38e744bfe895772.jpg");
+    background-image: url("/MechCrash-3.png");
 
-    /* position: absolute; */
-    /* Set a specific height */
-    min-height: 600px; 
+    /* Set a specific height for larger screens */
+    min-height: 1200px;
     width: 100%;
+    
+    /* Adjust height and border-radius for mobile screens */
+    
 
-    border-radius: 15px;
     box-shadow: 0 0 20px rgba(83, 125, 145, 0.57);
   
     /* Create the parallax scrolling effect */
@@ -217,7 +306,17 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+}
+
+@media (max-width: 768px) {
+    .parallax{
+        min-height: 600px;
+        background-image: url(Revision\ Post-1808-6.png);
+        border-radius: 0; /* Remove border-radius on mobile screens if needed */
+        background-size: cover;
+    }
+     /* Ensure the image covers the entire background on mobile */
+}
 
 @media (max-width: 768px) {
     .typewriter {
@@ -228,5 +327,36 @@ h2 {
 @media (max-width: 480px) {
     .typewriter {
         font-size: 18px; /* Further adjust the font size for even smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        padding-top: 10%;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    #countdown {
+        font-size: 1.5em;
+    }
+
+    ol {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        /* display: none; Hide links by default on small screens */
+        color: #111;
+    }
+
+    
+
+    .navbar.sticky:hover .nav-links {
+        /* display: none; Hide sticky links on hover on small screens */
     }
 }
