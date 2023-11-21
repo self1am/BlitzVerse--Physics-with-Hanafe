@@ -360,3 +360,112 @@ h2 {
         /* display: none; Hide sticky links on hover on small screens */
     }
 }
+
+.coursePane {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 50px;
+}
+
+.course-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.courseCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    width: 250px;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    padding: 10px;
+    transition: transform 0.3s;
+    background: rgba(139, 113, 113, 0.22);
+    box-shadow: 0 4px 30px rgba(209, 190, 190, 0.1);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.courseCard:hover {
+    box-shadow: 0 12px 16px 0 rgba(36, 34, 34, 0.24), 0 17px 50px 0 rgba(36, 34, 34, 0.19);
+    transform: scale(1.015);
+}
+
+.courseCard img {
+    width: 100%; /* Set the width to 100% to fit the placeholder width */
+    height: auto; /* Allow the height to be adjusted automatically */
+    max-height: 162px;
+    object-fit: cover; /* Ensure the image covers the entire container */
+    box-shadow: 0px 10px 0px 0px #626ba0 inset;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.course-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.course-info .tag {
+    display: flex;
+    width: 100%;
+    padding: 0px 18px;
+    justify-content: space-between;
+    color: #e9d4d4;
+
+}
+
+.course-info .tag .categ {
+    display: flex;
+    padding: 4px 6px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--gray);
+    border-radius: 4px;
+}
+
+.course-info .tag .price {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    color: #e9d4d4;
+
+}
+
+.course-info .name {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    color: #e9d4d4;
+}
+
+/* Adjust styles for mobile screens */
+@media (max-width: 768px) {
+    .coursePane {
+        padding: 20px; /* Adjust padding for better spacing on mobile */
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .course-col {
+        width: 100%; /* Make the course columns fill the screen vertically on mobile */
+    }
+}

@@ -6,27 +6,180 @@
     <link rel="stylesheet" href="timeline.css">
     <link rel="stylesheet" href="styles.css">
     <style>
-      p,h1,h2,h3,h4,h5,h6{color: black;}
+      p,h1,h2,h3,h4,h5,h6,ul{color: black;}
     </style>
     <title>Document</title>
 </head>
 <body>
     <div class="timeline" id="timeline-container">
+      <div class="orientation-prompt" id="orientationPrompt">
+        <p>Please tilt your phone to view the timeline.</p>
+      </div>
         <div class="container left">
           <div class="content">
-            <h2>2017</h2>
-            <p>Lorem ipsum..</p>
+            <p>23.11.2023</p>
+            <h2>Model Paper 01</h2>
+            <p></p>
           </div>
         </div>
         <div class="container right">
           <div class="content">
-            <h2>2016</h2>
-            <p>Lorem ipsum..</p>
+            <p>24.11.2023</p>
+            <h2>Model Paper 01</h2>
+            <p>contd..</p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <p>27.11.2023</p>
+            <h2>Heat</h2>
+            <p>
+              <ul>
+                <li>Temperature</li>
+                <li>Thermal Expansion</li>
+                <li>Gases</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <p>29.11.2023</p>
+            <h2>Heat</h2>
+            <p>
+              <ul>
+                <li>Kinetic Theory of Gases</li>
+                <li>Heat Exchange</li>
+                <li>Changes of State</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <p>02.12.2023</p>
+            <h2>Heat</h2>
+            <p>
+              <ul>
+                <li>Vapor & Humidity</li>
+                <li>Thermodynamics</li>
+                <li>Heat Transfer</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <p>04.12.2023</p>
+            <h2>Field</h2>
+            <p>
+              <ul>
+                <li>Common Field Equations</li>
+              </ul>
+              <ol>
+                <li>G-field</li>
+                <li>E-field
+                  <ul>
+                    <li>Electrostatic Force</li>
+                    <li>Flux Model </li>
+                    <li>Potential</li>
+                    <li>Capacitance</li>
+                  </ul>
+                </li>
+              </ol>
+            </p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <p>06.12.2023</p>
+            <h2>Field <span style="font-size: 12px;">contd</span></h2>
+            <p>
+              <ol start="3">
+                <li>M-field
+                  <ul>
+                    <li>M-force</li>
+                    <li>Torque acting on a Current Loop</li>
+                  </ul>
+                </li>
+              </ol>
+            </p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <p>09.12.2023</p>
+            <h2>Current Electricity</h2>
+            <p>
+              <ul>
+                <li>Electric Energy & Power</li>
+                <li>Electro-motive Force</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <p>13.12.2023</p>
+            <h2>Current Electricity <span style="font-size: 12px;">contd.</span></h2>
+            <p>
+              <ul>
+                <li>Kirchoff's Law</li>
+                <li>Measurements of Current and Potential difference</li>
+                <li>EM Induction</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <p>16.12.2023</p>
+            <h2>Electronics</h2>
+            <p>
+              <ul>
+                <li>Semi-Conductors & Diodes</li>
+                <li>Transistors, IC and Amplifiers</li>
+                <li>Digital Electronics</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <p>18.12.2023</p>
+            <h2>Properties of Matter</h2>
+            <p>
+              <ul>
+                <li>Elasticity</li>
+                <li>Viscosity</li>
+                <li>Surface Tension</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <p>20.12.2023</p>
+            <h2>Model Paper 03</h2>
+            <p>
+              
+            </p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <p>23.12.2023</p>
+            <h2>
+              Seminar Finale
+            </h2>
+            <p>
+              
+            </p>
           </div>
         </div>
       </div>
 
-      <script>
+      <!-- <script>
         // timeline.js
 document.addEventListener("DOMContentLoaded", function () {
   const timelineContainer = document.getElementById("timeline-container");
@@ -92,6 +245,26 @@ document.addEventListener("DOMContentLoaded", function () {
   renderTimeline();
 });
 
+      </script> -->
+      <script>
+        // Function to check if the device is in portrait orientation
+        function isPortrait() {
+          return window.innerHeight > window.innerWidth;
+        }
+    
+        // Function to update the visibility of the orientation prompt
+        function updateOrientationPrompt() {
+          const orientationPrompt = document.getElementById('orientationPrompt');
+          if (isPortrait()) {
+            orientationPrompt.style.display = 'flex';
+          } else {
+            orientationPrompt.style.display = 'none';
+          }
+        }
+    
+        // Initial check and event listener for orientation changes
+        updateOrientationPrompt();
+        window.addEventListener('orientationchange', updateOrientationPrompt);
       </script>
 </body>
 </html>
