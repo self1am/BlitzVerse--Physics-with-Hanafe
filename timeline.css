@@ -4,7 +4,7 @@
   .timeline {
     padding: 5%;
     position: relative;
-    width: 100%;
+    width: 1;
     margin: 0 auto;
   }
   
@@ -93,6 +93,7 @@
     border-radius: 6px;
   }
   
+  /* Media queries - Responsive timeline on screens less than 600px wide */
   /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
   /* Place the timeline to the left */
