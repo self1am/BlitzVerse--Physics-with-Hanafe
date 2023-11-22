@@ -69,6 +69,28 @@ body {
     opacity: 0.7; /* Reduce opacity when the navbar is sticky */
 }
 
+@media (max-width: 480px){
+    .logo-placeholder {
+        width: 20px; /* Adjust the width as needed */
+        height: 20px; /* Adjust the height as needed */
+        margin-right: 5px;
+    }
+
+    .brand {
+        font-size: 1.0em;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #fff;
+        margin-right: 10px;
+        font-size: 0.7em;
+        transition: color 0.3s ease;
+    }
+}
+
 .personal-section {
     background-color: #3c3434;
     padding: 50px 20px;
