@@ -69,6 +69,58 @@ body {
     opacity: 0.7; /* Reduce opacity when the navbar is sticky */
 }
 
+.personal-section {
+    background-color: #3c3434;
+    padding: 50px 20px;
+    border-radius: 5px;
+    width: 60%;
+
+}
+
+.personal-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} 
+
+.profile-picture {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit:cover;
+}
+
+.description {
+    max-width: 600px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.skill-section{
+    position: absolute;
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .personal-container{
+        display: flex;
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center;    
+    }
+    .profile-picture {
+        border-radius: 50%;
+        width: 150px; /* Adjust size for mobile */
+        height: 150px; /* Adjust size for mobile */
+        object-fit: cover;
+        margin-bottom: 20px; /* Add spacing between image and description */
+    }
+    
+    .description {
+        max-width: 100%;
+        text-align: center; /* Center text on small screens */
+    }
+}
+
 .hero{
     height: 100vh;
     display: flex;
@@ -207,7 +259,7 @@ ol{
 }
 
 h2 {
-    color: #3498db;
+    color: #b7cede;
 }
 
 .topics {
@@ -290,7 +342,7 @@ h2 {
 
 .parallax {
     /* The image used */
-    background-image: url("desktop.png");
+    background-image: url("https://i.pinimg.com/564x/ae/74/45/ae74451600a98d96e38e744bfe895772.jpg");
 
     /* Set a specific height for larger screens */
     min-height: 1200px;
@@ -311,7 +363,7 @@ h2 {
 @media (max-width: 768px) {
     .parallax{
         min-height: 600px;
-        background-image: url(mobile.png);
+        /* background-image: url(mobile.png); */
         border-radius: 0; /* Remove border-radius on mobile screens if needed */
         background-size: cover;
     }
@@ -348,7 +400,7 @@ h2 {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
     .nav-links {
         /* display: none; Hide links by default on small screens */
         color: #111;
