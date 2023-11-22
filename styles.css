@@ -290,7 +290,7 @@ h2 {
 
 .parallax {
     /* The image used */
-    background-image: url("/MechCrash-3.png");
+    background-image: url("desktop.png");
 
     /* Set a specific height for larger screens */
     min-height: 1200px;
@@ -311,7 +311,7 @@ h2 {
 @media (max-width: 768px) {
     .parallax{
         min-height: 600px;
-        background-image: url(Revision\ Post-1808-6.png);
+        background-image: url(mobile.png);
         border-radius: 0; /* Remove border-radius on mobile screens if needed */
         background-size: cover;
     }
