@@ -95,51 +95,53 @@
   
   /* Media queries - Responsive timeline on screens less than 600px wide */
   /* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-  /* Place the timeline to the left */
-  .timeline::after {
-    left: 10px;
-    margin-left: 0;
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+  .timeline {
+    padding: 2%;
   }
 
-  /* Full-width containers */
   .container {
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 80%;
+    padding: 10px 20px;
   }
 
-  /* Make sure that all arrows are pointing leftwards */
-  .container::before {
-    left: 5px;
-    border: medium solid white;
+  .container::after {
+    width: 15px;
+    height: 15px;
+    right: -10px;
+    top: 10px;
+    border-width: 3px;
+  }
+
+  .left, .right {
+    right: auto;
+    left: 10%;
+  }
+
+  .left::before {
+    right: auto;
+    left: 15px;
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
   }
 
-  /* Make sure all circles are at the same spot */
-  .left::after,
-  .right::after {
-    left: 0;
-  }
-
-  /* Make all right containers behave like the left ones */
-  .right {
-    left: 0;
-  }
-
-  /* Adjust position of the right container arrow */
   .right::before {
-    left: 20px;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+    left: auto;
+    right: 15px;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
   }
 
-  /* Adjust the circle for containers on the right side */
   .right::after {
     left: -6px;
   }
+
+  .content {
+    padding: 15px;
+  }
 }
+
 
 .orientation-prompt {
   display: none;
