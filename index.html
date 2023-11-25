@@ -5,7 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physics Study Plan</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-97QT7DJ28Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-97QT7DJ28Z');
+</script>
 <body>
     <div class="navbar">
         <div class="logo-container">
@@ -119,7 +129,24 @@
 
 
         <!-- timeline -->
-
+        <button onclick="openFullscreen()">Open Fullscreen</button>
+        <iframe id="myIframe" src="timeline.html" width="100%" height="100%" frameborder="0.1" allowfullscreen></iframe>
+        
+        <script>
+            function openFullscreen() {
+              const iframe = document.getElementById('myIframe');
+        
+              if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+              } else if (iframe.mozRequestFullScreen) {
+                iframe.mozRequestFullScreen();
+              } else if (iframe.webkitRequestFullscreen) {
+                iframe.webkitRequestFullscreen();
+              } else if (iframe.msRequestFullscreen) {
+                iframe.msRequestFullscreen();
+              }
+            }
+          </script>
     <script>
         var i = 0;
         var txt = 'Every Second Matters...'; /* The text */

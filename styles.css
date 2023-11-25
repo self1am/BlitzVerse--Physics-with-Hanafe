@@ -567,3 +567,9 @@ a {
         width: 100%; /* Make the course columns fill the screen vertically on mobile */
     }
 }
+
+.fullscr{
+    width: 100%;
+    height: 100%;
+}
+

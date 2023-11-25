@@ -4,8 +4,9 @@
   .timeline {
     padding: 5%;
     position: relative;
-    width: 1;
+    max-width: 1200px;
     margin: 0 auto;
+    /* width: 80%; */
   }
   
   /* The actual timeline (the vertical ruler) */
@@ -96,9 +97,13 @@
   /* Media queries - Responsive timeline on screens less than 600px wide */
   /* Media queries - Responsive timeline on screens less than 600px wide */
 /* Mobile Styles */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
   .timeline {
     padding: 2%;
+  }
+
+  .timeline::after {
+    z-index: -1;
   }
 
   .container {
@@ -139,6 +144,7 @@
 
   .content {
     padding: 15px;
+    max-width: 100%;
   }
 }
 
