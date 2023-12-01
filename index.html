@@ -28,10 +28,22 @@
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="#whatsappModal">Contact</a>
         </div>
     </div>
     <!-- url("https://i.pinimg.com/564x/ae/74/45/ae74451600a98d96e38e744bfe895772.jpg") -->
+
+    <!-- WhatsApp Modal -->
+    <div id="whatsappModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <a href="https://wa.me/+94763811834?text=Hello%20there,%20I%20am%20contacting%20you%20from%20your%20website." target="_blank">Open WhatsApp</a>
+        </div>
+    </div>
+
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-71948ab1-eb48-4e4c-bd6d-7298b0ac11ca" data-elfsight-app-lazy></div>
+
     <div class="hero" id="home">
         <div class="countdown-container">
             <div class="countdown-circle">
@@ -226,6 +238,29 @@
                 navbar.classList.remove('sticky');
             }
         };
+    </script>
+    <script>
+        // Get the modal and button elements
+        var modal = document.getElementById('whatsappModal');
+        var contactBtn = document.getElementById('contactBtn');
+
+        // Open the modal when the "Contact" button is clicked
+        contactBtn.addEventListener('click', function() {
+            modal.style.display = 'block';
+        });
+
+        // Close the modal when the close button or outside the modal is clicked
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        // Close the modal if the user clicks outside the modal
+        window.addEventListener('click', function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+
     </script>
 </body>
 </html>
