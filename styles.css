@@ -3,6 +3,10 @@ html{
     scroll-padding: 10rem;
 }
 
+link[rel="icon"]{
+    border-radius: 50%;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #111;
@@ -30,17 +34,20 @@ body {
 .logo-container {
     display: flex;
     align-items: center;
+    
 }
 
 .logo-placeholder {
     width: 40px; /* Adjust the width as needed */
     height: 40px; /* Adjust the height as needed */
     margin-right: 10px;
+    
 }
 
 .logo-placeholder img {
     width: 100%; /* Make the logo fill the placeholder */
     height: auto; /* Maintain the aspect ratio */
+    border-radius: 100%;
 }
 
 .brand {
