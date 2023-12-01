@@ -27,7 +27,7 @@
         </div>
         <div class="nav-links">
             <a href="#home">Home</a>
-            <a href="#about">About Us</a>
+            <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </div>
     </div>
@@ -48,7 +48,7 @@
 
     <!-- ... Previous HTML code ... -->
 
-    <div class="personal-section">
+    <div class="personal-section" id="about">
         <div class="personal-container">
             <img src="profile.png" alt="Your Name" class="profile-picture">
             <div class="description">
@@ -64,7 +64,7 @@
     <!-- ... Remaining HTML code ... -->
 
 
-    <div class="container" id="about">
+    <div class="container">
         <div class="parallax"></div>
             <div class="caption">
                 <span class="border"><a href="#course">Go To Courses</a></span>
@@ -132,6 +132,19 @@
         <button onclick="openFullscreen()">Open Fullscreen</button>
         <iframe id="myIframe" src="timeline.html" width="100%" height="100%" frameborder="0.1" allowfullscreen></iframe>
         
+        <!-- <div class="timeline-container">
+            <div class="timeline">
+                <ul>
+                    <li>
+                        <div class="timeline-content">
+                            <h1>Model Paper 01</h1>
+                            <p></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+
         <script>
             function openFullscreen() {
               const iframe = document.getElementById('myIframe');
