@@ -21,6 +21,10 @@ body {
 }
 
 .navbar {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInUp 1s forwards;
+
     background-color: #111;
     padding: 10px 20px;
     box-shadow: none; /* Initially, no shadow */
@@ -29,6 +33,23 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+
+.scroll{
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .logo-container {
@@ -342,15 +363,15 @@ h2 {
     justify-content: center;
     align-items: center;
     gap: 14px;
-    background: #7DAOCA;
+    /* background: #7DAOCA; */
     cursor: pointer;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
     padding: 20px; /* Added padding for better spacing */
     transition: transform 0.3s;
     background: rgba(255, 255, 255, 0.22);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3.5px);
     -webkit-backdrop-filter: blur(5.5px);
+    backdrop-filter: blur(3.5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
   }
 
@@ -498,8 +519,8 @@ h2 {
     transition: transform 0.3s;
     background: rgba(139, 113, 113, 0.22);
     box-shadow: 0 4px 30px rgba(209, 190, 190, 0.1);
-    backdrop-filter: blur(3.5px);
     -webkit-backdrop-filter: blur(5.5px);
+    backdrop-filter: blur(3.5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 

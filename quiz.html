@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <object data="weekly ass.pdf" type="application/pdf" width="80%" height="500px"></object>
+
+    <div class="quiz-cnt">
+        <div class="que">Question No. 1<span id="qNo"></span></div>
+        <div class="ans-cnt">
+            <a href="#" class="btn">Option 1</a>
+            <a href="#" class="btn">Option 2</a>
+            <a href="#" class="btn">Option 3</a>
+            <a href="#" class="btn">Option 4</a>
+            <a href="#" class="btn">Option 5</a>
+        </div>
+        <div class="btn">Next Question</div>
+    </div>
+
+    <a href="https://www.mythrillfiction.com/the-dark-rider" alt="Mythrill" target="_blank">
+        <div class="card">
+          <div class="wrapper">
+            <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-cover.jpg" class="cover-image" />
+          </div>
+          <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png" class="title" />
+          <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-character.webp" class="character" />
+        </div>
+      </a>
+      
+      <a href="https://www.mythrillfiction.com/force-mage" alt="Mythrill" target="_blank">
+        <div class="card">
+          <div class="wrapper">
+            <img src="https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg" class="cover-image" />
+          </div>
+          <img src="https://ggayane.github.io/css-experiments/cards/force_mage-title.png" class="title" />
+          <img src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp" class="character" />
+        </div>
+      </a>
+
+    <!-- <iframe src="https://forms.gle/66movN6vVP9uTAZ36" frameborder="0"></iframe> -->
+
+    <script>
+        const queNo = document.getElementById("qNo");
+        queNo = 1;
+
+    </script>
+
+    <script>
+        const quizContainer = document.getElementById('quiz-container');
+        const questionContainer = document.getElementById('question-container');
+        const answerButtons = document.getElementById('answer-buttons');
+        const nextButton = document.getElementById('next-button');
+
+        let currentQuestionIndex = 0;
+
+        const questions = [
+            {
+                question: 'Question 1?',
+                answers: [
+                    { text: 'Option 1', correct: false},
+                    { text: 'Option 2', correct: false},
+                    { text: 'Option 3', correct: false},
+                    { text: 'Option 4', correct: true},
+                    { text: 'Option 5', correct: false}
+                ]
+            },
+            {
+                question: 'Question 2?',
+                answers: [
+                    { text: 'Option 1', correct: false},
+                    { text: 'Option 2', correct: false},
+                    { text: 'Option 3', correct: false},
+                    { text: 'Option 4', correct: false},
+                    { text: 'Option 5', correct: true}
+                ]
+            },{
+                question: 'Question 3?',
+                answers: [
+                    { text: 'Option 1', correct: false},
+                    { text: 'Option 2', correct: false},
+                    { text: 'Option 3', correct: false},
+                    { text: 'Option 4', correct: true},
+                    { text: 'Option 5', correct: false}
+                ]
+            },{
+                question: 'Question 4?',
+                answers: [
+                    { text: 'Option 1', correct: false},
+                    { text: 'Option 2', correct: false},
+                    { text: 'Option 3', correct: false},
+                    { text: 'Option 4', correct: false},
+                    { text: 'Option 5', correct: true}
+                ]
+            },{
+                question: 'Question 5?',
+                answers: [
+                    { text: 'Option 1', correct: true},
+                    { text: 'Option 2', correct: false},
+                    { text: 'Option 3', correct: false},
+                    { text: 'Option 4', correct: false},
+                    { text: 'Option 5', correct: false}
+                ]
+            },{
+                question: 'Question 6?',
+                answers: [
+                    { text: 'Option 1', correct: false},
+                    { text: 'Option 2', correct: false},
+                    { text: 'Option 3', correct: false},
+                    { text: 'Option 4', correct: false},
+                    { text: 'Option 5', correct: true}
+                ]
+            },{
+                question: 'Question 7?',
+                answers: [
+                    { text: 'Option 1', correct: false},
+                    { text: 'Option 2', correct: false},
+                    { text: 'Option 3', correct: false},
+                    { text: 'Option 4', correct: false},
+                    { text: 'Option 5', correct: true}
+                ]
+            },{
+                question: 'Question 8?',
+                answers: [
+                    { text: 'Option 1', correct: true},
+                    { text: 'Option 2', correct: false},
+                    { text: 'Option 3', correct: false},
+                    { text: 'Option 4', correct: false},
+                    { text: 'Option 5', correct: false}
+                ]
+            },{
+                question: 'Question 9?',
+                answers: [
+                    { text: 'Option 1', correct: false},
+                    { text: 'Option 2', correct: false},
+                    { text: 'Option 3', correct: false},
+                    { text: 'Option 4', correct: true},
+                    { text: 'Option 5', correct: false}
+                ]
+            },{
+                question: 'Question 10?',
+                answers: [
+                    { text: 'Option 1', correct: false},
+                    { text: 'Option 2', correct: false},
+                    { text: 'Option 3', correct: true},
+                    { text: 'Option 4', correct: false},
+                    { text: 'Option 5', correct: false}
+                ]
+            },{
+                question: 'Question 11?',
+                answers: [
+                    { text: 'Option 1', correct: false},
+                    { text: 'Option 2', correct: false},
+                    { text: 'Option 3', correct: false},
+                    { text: 'Option 4', correct: false},
+                    { text: 'Option 5', correct: true}
+                ]
+            }
+        ];
+
+        function startQuiz() {
+            currentQuestionIndex = 0;
+            userAnswers = [];
+            showQuestion(questions[currentQuestionIndex]);
+        }
+
+        function showQuestion(question) {
+            questionContainer.innerText = question.question;
+            answerButtons.innerHTML = '';
+            question.answers.forEach(answer => {
+                const button = document.createElement('button');
+                button.innerText = answer.text;
+                button.classList.add('btn');
+                button.addEventListener('click', () => selectAnswer(answer));
+                answerButtons.appendChild(button);
+            });
+
+            displayPreviousAnswers();
+        }
+
+        function selectAnswer(answer) {
+            userAnswers[currentQuestionIndex] = answer.text;
+            saveUserAnswers();
+        }
+
+        function saveUserAnswers() {
+            localStorage.setItem('userAnswers', JSON.stringify(userAnswers));
+        }
+
+        function displayPreviousAnswers() {
+            const storedAnswers = JSON.parse(localStorage.getItem('userAnswers'));
+            if (storedAnswers) {
+                userAnswers = storedAnswers;
+                for (let i = 0; i < userAnswers.length; i++) {
+                    const buttons = answerButtons.getElementsByTagName('button');
+                    if (buttons[i]) {
+                        buttons[i].classList.add('selected');
+                    }
+                }
+            }
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                showQuestion(questions[currentQuestionIndex]);
+            } else {
+                // Quiz is finished
+                quizContainer.innerHTML = '<h2>Quiz Complete!</h2>';
+            }
+        }
+
+        startQuiz();
+
+    </script>
+</body>
+</html>
